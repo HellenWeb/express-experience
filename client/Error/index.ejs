@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <style>
+            body {
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background: #fff;
+            }
+
+            .error {
+                text-align: center;
+                margin: 14% 0;
+            }
+
+            #h1 {
+                font-size: 100px;
+                color: tomato;
+            }
+
+            #hr1 {
+                opacity: .1;
+            }
+
+            #p1 {
+                opacity: .5;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+
+            #a1 {
+                font-weight: 500;
+                font-size: 15px;
+                text-decoration: none;
+                color: #000;
+            }
+
+            #a1:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="error">
+                <h1 id="h1">404</h1>
+                <hr id="hr1">
+                <p id="p1">
+                    Page not Found
+                </p>
+                <a id="a1" href="/">Go Home</a>
+            </div>
+        </div>
+    </body>
+</html>

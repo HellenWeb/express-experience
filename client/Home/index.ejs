@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') %>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                background: #fff;
+            }
+
+            .container h1 {
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .container hr {
+                opacity: 0.1;
+            }
+
+            .container p {
+                text-align: center;
+                opacity: .5;
+                font-size: 14px;
+            }
+
+            .intro {
+                margin: 11% 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <%- include('../partials/navbar') %>
+            <br>
+            <%- include('../partials/intro') %>
+        </div>
+    </body>
+</html>
