@@ -22,7 +22,7 @@
             }
 
             .container hr {
-                opacity: 0.1;
+                opacity: 0;
             }
 
             .container p {
@@ -32,7 +32,16 @@
             }
 
             .intro {
-                margin: 11% 0;
+                margin: 12% 0;
+                width: 100%;
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            .intro.intro__show {
+                transition: 2s all;
+                opacity: 1;
+                transform: translateY(-20px);                
             }
 
         </style>
@@ -43,5 +52,32 @@
             <br>
             <%- include('../partials/intro') %>
         </div>
+        <script>
+
+            // Variebles
+
+            const intro = document.querySelector('intro')
+
+            function onEntry1(entry) {
+            entry.forEach(change => {
+                if (change.isIntersecting) {
+                change.target.classList.add('intro__show');
+                }
+            });
+            }
+
+            // Настраиваем переменные
+
+            let options1 = {threshold: [0.5] };
+            let observer1 = new IntersectionObserver(onEntry1, options1);
+            let elements1 = document.querySelectorAll('.intro');
+
+            for (let elm of elements1) {
+            observer1.observe(elm);
+
+            // => ||
+
+            }
+        </script>
     </body>
 </html>
