@@ -5,6 +5,7 @@ const express = require('express')
 const path = require('path')
 const chalk = require('chalk')
 const PORT = require("./data.js")
+const serverRouter = require("./router")
 
 // Default variables
 
@@ -14,6 +15,7 @@ const app = express();
 
 app.set('view engine', 'ejs')
 app.set('views', path.resolve(__dirname, 'client'))
+
 
 // Get request
 
